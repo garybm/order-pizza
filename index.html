@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Order Pizza</title>
   </head>
   <body>
-
+    <div class="container">
+      <h1>Order Your Pizza</h1>
+      <hr>
+      <h2>Choose size and toppings!:</h2>
+      <form id="new-pizza">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Pizza Size</label>
+          <select class="form-control" id="size">
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="">Pepperoni</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" value="">Bacon</label>
+        </div>
+        <div class="checkbox disabled">
+          <label><input type="checkbox" value="">Green Pepper</label>
+        </div>
+        <button type="submit" class="btn-primary">SUBMIT ORDER</button>
+      </form>
+      <div id="newOrder">
+      </div>
+    </div>
   </body>
 </html>
