@@ -16,6 +16,7 @@ Pizza.prototype.pizzaPrize = function() {
   return this.size + this.toppings;
 }
 var testPizza = new Pizza(100, 25);
+
 testPizza.pizzaPrize();
 
 
@@ -28,8 +29,10 @@ testPizza.pizzaPrize();
 $(document).ready(function() {
   $("form#new-pizza").submit(function(event) {
     event.preventDefault();
-    var selectSize = $("input#size").val();
-    var toppings = $("input#toppings").val();
+    var selectedSize = $("#pizzaSize").val();
+    var selectedToppings = $("#toppings").val();
+    var newPizza = new Pizza (selectedSize , selectedToppings)
+    Pizza.pizzaPrize(newPizza);
 
     $("#newPizza").show();
   })

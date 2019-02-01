@@ -14,25 +14,33 @@
       <h2>Choose size and toppings!:</h2>
       <form id="new-pizza">
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Pizza Size</label>
-          <select class="form-control" id="size">
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
-          </select>
-        </div>
-        <div class="checkbox">
-          <label><input type="checkbox" value="">Pepperoni</label>
-        </div>
-        <div class="checkbox">
-          <label><input type="checkbox" value="">Bacon</label>
-        </div>
-        <div class="checkbox disabled">
-          <label><input type="checkbox" value="">Green Pepper</label>
-        </div>
-        <button type="submit" class="btn-primary">SUBMIT ORDER</button>
-      </form>
-      <div id="newOrder">
+           <select id="pizza-size" class="form-control" name="size">
+             <option value="size" selected disabled>Pick a Size</option>
+             <option value="large">Large ($12) </option>
+             <option value="medium">Medium ($10)</option>
+             <option value="small">Small ($8)</option>
+           </select>
+         </div>
+         <label for="toppings">Optional toppings to add to your cheese pizza:</label>
+           <div class="checkbox">
+             <label>
+               <input type="checkbox" name="toppings" value="pepperoni">Pepperoni</label>
+           </div>
+           <div class="checkbox">
+             <label>
+               <input type="checkbox" name="toppings" value="black olives">Black olives</label>
+           </div>
+           <div class="checkbox">
+             <label>
+               <input type="checkbox" name="toppings" value="sausage">Sausage</label>
+           </div>
+           <button type="submit" class="bttn">ORDER PIZZA!</button>
+          </form>
+          <div id="output">
+            <h4>Order summary:</h4>
+            <p>1 <span class="pizza-size-output"></span> <span class="pizza-toppings-output1"></span><span class="pizza-toppings-output3"></span><span class="pizza-toppings-output2"></span>.</p>
+            <p id="total">Total: $<span class="pizza-price-output"></span></p>
+          </div>
       </div>
     </div>
   </body>
