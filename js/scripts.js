@@ -6,14 +6,20 @@
 //Keep it simple to start! You do not need to have a complex formula for determining cost (although you can if you like). The most important part of this code review is using and demonstrating your understanding of constructors and prototypes.//
 
 //bussines logic//
-function Pizza(size, toppings, prize) {
+
+function Pizza(size, toppings) {
   this.size =  size;
-  this.toppings = []; //This empty array will hold toppins//
+  this.toppings = []; //array of numbers//
 }
 
 Pizza.prototype.pizzaPrize = function() {
-  return this.prize;
+  return this.size + this.toppings;
 }
+var testPizza = new Pizza(100, 25);
+testPizza.pizzaPrize();
+
+
+
 
 // let order = new Pizza("medium", ["salami", "cheese"]);
 
