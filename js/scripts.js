@@ -7,40 +7,38 @@
 
 //bussines logic//
 
-function Pizza(size, toppings) {
+function Pizza(size, topping) {
   this.size =  size;
-  this.toppings = toppings;
+  this.topping = topping;
+  this.price=0;
 }
-var testPizza = new Pizza(100, 25);
 
-Pizza.prototype.newPizza = function() {
-  return this.size + this.toppings;
-}
-var testPizza = new Pizza(100, 25);
-
-Pizza.prototype.pizzaPrize = function() {
+Pizza.prototype.pizzaSize = function() {
   if (this.size === "large"){
-    this.pizzaPrice = 12;
+    this.size = 12;
   } else if (this.size = "medium"){
-    this.pizzaPrice = 10;
+    this.size = 10;
   } else if (this.size = "small"){
-    this.pizzaPrice = 8;
+    this.size = 8;
   } else {
      this.pizzaPrice = 0;
   }
 }
 
-
-var testPizza = new Pizza(100, 25);
-
-testPizza.pizzaPrize();
-
-
-let order = new Pizza("medium", ["salami", "cheese"]);
-
-
-UI logic//
-var newPizzza = new Pizza();
+Pizza.prototype.toppings = function() {
+  if (this.topping === "pepperoni"){
+  this.topping = 5;
+  } else if(this.topping === "olives") {
+    this.topping = 5;
+  } else if (this.topping === "peppers"){
+    this.topping = 5;
+  } else {
+    this.topping = 0;
+    }
+  }
+  Pizza.prototype.totalPrice = function() {
+    return this.size += this.topping;
+  }
 
 $(document).ready(function() {
   $("form#new-pizza").submit(function(event) {
