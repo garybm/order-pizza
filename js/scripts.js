@@ -9,31 +9,45 @@
 
 function Pizza(size, toppings) {
   this.size =  size;
-  this.toppings = []; //array of numbers//
+  this.toppings = toppings;
 }
 
-Pizza.prototype.pizzaPrize = function() {
-  return this.size + this.toppings;
+Pizza.prototype.newPizza = {
+  return this.size +  this.toppings;
 }
-var testPizza = new Pizza(100, 25);
 
-testPizza.pizzaPrize();
+// Pizza.prototype.pizzaPrize = function() {
+//   if (this.size === "large"){
+//     this.pizzaPrice = 12;
+//   } else if (this.size = "medium"){
+//     this.pizzaPrice = 10;
+//   } else if (this.size = "small"){
+//     this.pizzaPrice = 8;
+//   } else {
+//      this.pizzaPrice = 0;
+//   }
+// }
 
 
+// var testPizza = new Pizza(100, 25);
+//
+// testPizza.pizzaPrize();
 
 
 // let order = new Pizza("medium", ["salami", "cheese"]);
 
 
 //UI logic//
+var newPizzza = new Pizza();
+
 $(document).ready(function() {
   $("form#new-pizza").submit(function(event) {
     event.preventDefault();
-    var selectedSize = $("#pizzaSize").val();
-    var selectedToppings = $("#toppings").val();
-    var newPizza = new Pizza (selectedSize , selectedToppings)
-    Pizza.pizzaPrize(newPizza);
-
-    $("#newPizza").show();
+    var size = $("#pizza-size").val();
+    var toppings = $("#toppings").val();
+    var newPizza = new Pizza (size, toppings);
+    pizzaPrize.pizza
+    $(".totalPrice").text(newPizza);
+    $("#total").show();
   })
 })
