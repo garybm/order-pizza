@@ -38,8 +38,10 @@ $(document).ready(function() {
     event.preventDefault();
     var size = $("#pizza-size").val();
     var topping = $("input:radio[name=topping]:checked").val();
+    var newPizzaOrder = new Pizza();
 
-    $("total").text(size);
-    $("#total").show();
+    var totalPrice = (size + toppings);
+    $("#total").text(totalPrice);
+    $(".output").show();
   })
 })
