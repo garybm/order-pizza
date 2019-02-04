@@ -20,41 +20,35 @@
       </div>
       <div class="jumbotron">
       <form id="new-pizza">
-        <h2>Choose size and toppings!:</h2>
+        <h2>Choose size and toppings:</h2>
         <div class="form-group">
            <select id="pizza-size" class="form-control" name="size">
              <option value="" selected disabled>Pick a Size</option>
              <option value="12">Large ($12) </option>
              <option value="10">Medium ($10)</option>
-             <option value="18">Small ($8)</option>
+             <option value="8">Small ($8)</option>
            </select>
          </div>
-         <label for="toppings">Optional toppings to add to your cheese pizza:</label>
-         <div class="radio">
-          <label>
-            <input type="radio" name="topping" value="pepperoni" checked>
-            Pepperoni
-          </label>
-          </div>
-          <div class="radio">
-          <label>
-            <input type="radio" name="topping" value="olives">
-            Olives
-          </label>
-          </div>
-          <div class="radio">
-          <label>
-            <input type="radio" name="topping" value="peppers">
-            Green peppers
-          </label>
-          </div>
+            <p>Select your Toppings ($1.50 each)</p>
+         		<input type="checkbox" id="topping1"> Pepperoni<br>
+         		<input type="checkbox" id="topping2"> Extra Cheese<br>
+         		<input type="checkbox" id="topping3"> Sausage<br>
+         		<input type="checkbox" id="topping4"> Bacon<br>
+         		<input type="checkbox" id="topping5"> Peppers<br>
+         		<input type="checkbox" id="topping6"> Mushrooms<br>
+         		<input type="checkbox" id="topping7"> Black Olives<br>
+         		<input type="checkbox" id="topping8"> Jalepenoes<br>
+         		<input type="checkbox" id="topping9"> Pineapples<br>
+         		<input type="checkbox" id="topping0"> Onions<br>
+         		<input type="checkbox" id="topping10"> Diced Tomatoes<br>
+         		<input type="checkbox" id="topping11"> Ham<br>
+         		<input type="checkbox" id="topping12"> Anchovies<br>
            <button type="submit" class="bttn">ORDER PIZZA!</button>
           </form>
         </div>
           <div class="jumbotron">
           <div id="output">
             <h4>Order summary:</h4>
-            <p>1 <span class="pizza-size-output"></span> <span class="pizza-toppings-output1"></span><span class="pizza-toppings-output3"></span><span class="pizza-toppings-output2"></span>.</p>
             <p>Total: $<span id="total" class="totalPrice"></span></p>
           </div>
         </div>
