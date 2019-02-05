@@ -7,55 +7,35 @@
 
 //bussines logic//
 
+
 function Pizza(size,topping) {
-  this.size =  size;
+  this.size = size;
   this.topping = topping;
 }
-//
-// let garyPizza = new Pizza('large','pepperoni');
-// console.log(garyPizza)
-//
-// function newPizza () {
-//   return(size + topping);
-// }
-// console.log(newPizza);
-
 
 Pizza.prototype.pizzaPrice = function() {
-
   if (this.size === "large"){
-    return large + this.topping;
-  }
-  if (this.size === "medium"){
-    return medium + this.topping;
-  }
-  if (this.size === "small"){
-    return small + this.topping;
-  } else {
-    return 0;
+    this.cost = 12 + this.topping;
+  } else if (this.size === "medium"){
+    this.cost = 10 + this.topping;
+  } else if (this.size === "small"){
+    this.cost = 8 + this.topping;
+  } else { alert("error");
   }
 }
 
-// Pizza.prototype.pizzaPrice = function() {
-//   var sizePrice =();
-//   var totalPrice = sizePrice + (this.toppings * 2.50);
-//   return totalPrice;
-//   }
-
-  //UI//
+//UI logic//
 
 $(document).ready(function() {
   $("form#new-pizza").submit(function(event) {
     event.preventDefault();
-    var small = 8;
-    var medium = 10;
-    var large = 12;
-    var topping = 2;
-    var size = parseInt($("#pizza-size").val());
-    var topping = parseInt($("input:radio[name=topping]:checked").val());
-    var newPizza = (size + topping);
+    var size = $("#pizza-size").val();
+    var topping = 0; $("input:checkbox:checked").each(function(){ topping++;
+    });
 
-    $("#total").text(newPizza);
-    $(".output").show(newPizza);
+    var newPizza = new Pizza(size, topping); newPizza.pizzaPrice();
+
+    $("#total").text(newPizza.cost);
+    $(".output").show();
   })
 })
