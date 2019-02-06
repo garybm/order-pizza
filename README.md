@@ -10,23 +10,24 @@ _The Pizza Order allows the user to select a pizza size and different topping an
 ## SPECS
 The purpose of this project is to have a user order a pizza, with different choices of topping and size.
 
-Exception 1: Program will input size of pizza
+* _ Program will input size of pizza_
 
 Example Input: small
 
 Expected output for each: Your total cost is $10
 
-Exception 2: Program will input different topping.
+* _Program will input different topping_
 
 Example input: chicken, pineapple, olives
 
-Expected output: Your total cost is $Undefined
+Expected output: Your total cost is $12
 
-Exception #: Program will input different topping with a pizza size.
+* _ Program will input different topping with a pizza size_
 
 Example input: chicken, pineapple, olives with a small size pizza
 
-Expected output: Your total cost is $13
+Expected output: Your total cost is $12
+
 ## Setup/Installation Requirements
 
 * _Clone this repository to your local machine_
