@@ -14,19 +14,19 @@ The purpose of this project is to have a user order a pizza, with different choi
 
 Example Input: small
 
-Expected output for each: Your total cost is $10
+Expected output for each: Your total cost is $8
 
 * _Program will input different topping_
 
 Example input: chicken, pineapple, olives
 
-Expected output: Your total cost is $12
+Expected output: Your total cost is $11
 
 * _Program will input different topping with a pizza size_
 
 Example input: chicken, pineapple, olives with a small size pizza
 
-Expected output: Your total cost is $12
+Expected output: Your total cost is $11
 
 ## Setup/Installation Requirements
 
